@@ -60,24 +60,3 @@ spec:
             containerPort: 9090
             protocol: TCP
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: yapi
-  namespace: central
-  annotations:
-    nginx.ingress.kubernetes.io/proxy-read-timeout: '3600'
-    nginx.ingress.kubernetes.io/proxy-send-timeout: '3600'
-    nginx.ingress.kubernetes.io/proxy-body-size: 1g
-spec:
-  rules:
-  - host: yapi.mysite.com
-    http:
-      paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: yapi
-              port:
-                number: 3000
