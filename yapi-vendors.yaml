@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: yapi-vendors
-  namespace: yapi
+  namespace: central
   labels:
     app: yapi-vendors
 spec:
@@ -21,7 +21,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: yapi-vendors
-  namespace: yapi
+  namespace: central
   labels:
     app: yapi-vendors
 spec:
@@ -53,30 +53,30 @@ spec:
               memory: 512Mi
           env:
           - name: YAPI_PORT
-            value: '3000'
+            value: '3002'
           - name: YAPI_ADMIN_ACCOUNT
-            value: wangsiheng@gmail.com
+            value: admin
           - name: YAPI_ADMIN_PASSWORD
-            value: passport@123
+            value: admin123
           - name: YAPI_CLOSE_REGISTER
             value: 'false'
           - name: YAPI_NPM_REGISTRY
             value: https://registry.npm.taobao.org
           - name: YAPI_DB_SERVERNAME
-            value: mongodb
+            value: 3.133.119.143
           - name: YAPI_DB_PORT
             value: '27017'
           - name: YAPI_DB_DATABASE
-            value: yapi
+            value: weee_yapi
           - name: YAPI_DB_USER
-            value: wangsiheng@gmail.com
+            value: weee_yapi
           - name: YAPI_DB_PASS
-            value: passport@123
+            value: 12345dfsdfdsfs6
           - name: YAPI_DB_AUTH_SOURCE
-            value: admin
+            value: weee_yapi
           ports:
-          - name: yapi-3000
-            containerPort: 3000
+          - name: yapi-3002
+            containerPort: 3002
             protocol: TCP
           - name: yapi-9090
             containerPort: 9090
