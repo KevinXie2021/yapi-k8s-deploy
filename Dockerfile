@@ -1,6 +1,6 @@
 FROM node:18-alpine as builder
 WORKDIR /yapi
-RUN apk add --no-cache wget python make
+#RUN apk add --no-cache wget python make
 ENV VERSION=1.0
 RUN wget https://github.com/KevinXie2021/weee_yapi/releases/tag/v${VERSION}.zip
 RUN unzip v${VERSION}.zip && mv yapi-${VERSION} vendors
