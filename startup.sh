@@ -32,7 +32,7 @@ rm package-lock.json #这个不删会导致安装失败
 npm install --production --registry https://registry.npm.taobao.org
 
 #初始化账号和数据库索引，可在第一次运行时单独跑(进入容器yapi/vendors目录运行)，不然后面每次重启都因为这句卡住： UnhandledPromiseRejectionWarning: Error: 初始化管理员账号 "***@gmail.com" 失败, E11000 duplicate key error collection: yapi.user index: email_1 dup key
-#npm run install-server 
+npm run install-server
 node server/app.js
 
 
