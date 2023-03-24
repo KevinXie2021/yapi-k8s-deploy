@@ -10,7 +10,7 @@ cp vendors/config_example.json ./config.json
 
 #复制完成后替换相关配置
 sed -i "2 a  \"closeRegister\":${CLOSE_REGISTER:-false}," config.json
-sed -i 's/\"adminAccount\": \"admin@admin.com\"/\"adminAccount\": '\"${YAPI_ADMIN_ACCOUNT}\"'/g' config.json
+#sed -i 's/\"adminAccount\": \"admin@admin.com\"/\"adminAccount\": '\"${YAPI_ADMIN_ACCOUNT}\"'/g' config.json
 sed -i 's/\"servername\": \"127.0.0.1\"/\"servername\": '\"${YAPI_DB_SERVERNAME}\"'/g' config.json
 sed -i 's/\"DATABASE\": \"yapi\"/\"DATABASE\": '\"${YAPI_DB_DATABASE}\"'/g' config.json
 sed -i 's/\"user\": \"test1\"/\"user\": '\"${YAPI_DB_USER}\"'/g' config.json

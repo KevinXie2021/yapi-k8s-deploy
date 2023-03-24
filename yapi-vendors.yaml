@@ -41,7 +41,7 @@ spec:
       containers:
         - name: yapi-vendors
           image: gebiwangshushu/hei-yapi-vendors:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Never
           workingDir: /app
           command: ['./startup.sh']
           resources:
