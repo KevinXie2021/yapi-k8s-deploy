@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
         - name: yapi-vendors
-          image: yapi-vendors:v1.1
+          image: gebiwangshushu/hei-yapi-vendors:latest
           imagePullPolicy: IfNotPresent
           workingDir: /app
           command: ['./startup.sh']
