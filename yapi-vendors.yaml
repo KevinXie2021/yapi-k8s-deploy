@@ -73,7 +73,7 @@ spec:
           - name: YAPI_DB_PASS
             value: 12345dfsdfdsfs6
           - name: YAPI_DB_AUTH_SOURCE
-            value: admin
+            value:
           ports:
           - name: yapi-3002
             containerPort: 3002
