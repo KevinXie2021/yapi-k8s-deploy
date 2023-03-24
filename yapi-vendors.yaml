@@ -7,8 +7,8 @@ metadata:
     app: yapi-vendors
 spec:
   ports:
-    - port: 3000
-      targetPort: 3000
+    - port: 3002
+      targetPort: 3002
       name: yapi-vendors
     - port: 9090
       targetPort: 9090
